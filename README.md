@@ -2,31 +2,33 @@
 
 **P**orous **O**bjects **R**esearch & **E**xploration in **XR** (PORE-XR) is an immersive Extended Reality (XR) visualization platform for exploring large-scale X-ray Computed Tomography (XCT) datasets and correlated metallography data in materials science. The platform enables researchers, students, and industry practitioners to intuitively explore internal material structures, analyze defects such as porosity and cracks, and perform spatially correlated multimodal analysis in VR, AR, and desktop environments.
 
----
+> _[Demo Video Placeholder]_
 
-## 📖 Table of Contents
-
-- Overview
-- Problem Statement
-- Proposed Solution
-- Key Features
-- System Architecture
-- Data Pipeline
-- Interaction & Analysis Tools
-- Performance Strategy
-- Deployment Targets
-- Extensions / Future Work
-- Demo
-- Getting Started
-- Repository Structure
-- Roadmap
-- Contributing
-- License
-- Contact
+> _[Screenshots / GIF Placeholder]_
 
 ---
 
-## 🔬 Overview
+## Table of Contents
+
+- [Overview](#overview)
+- [Problem Statement](#problem-statement)
+- [Proposed Solution](#proposed-solution)
+- [Key Features](#key-features)
+- [System Architecture](#system-architecture)
+- [Data Pipeline](#data-pipeline)
+- [Interaction and Analysis Tools](#interaction-and-analysis-tools)
+- [Deployment Targets](#deployment-targets)
+- [Extensions / Future Work](#extensions--future-work)
+- [Getting Started](#getting-started)
+- [Repository Structure](#repository-structure)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+---
+
+## Overview
 
 X-ray Computed Tomography (XCT) provides non-destructive insight into the internal structure of materials across multiple length scales. However, conventional visualization workflows limit intuitive spatial understanding and multimodal correlation with complementary imaging techniques such as metallography.
 
@@ -34,7 +36,7 @@ X-ray Computed Tomography (XCT) provides non-destructive insight into the intern
 
 ---
 
-## ❗ Problem Statement
+## Problem Statement
 
 Current XCT data exploration workflows are typically limited to:
 
@@ -59,7 +61,7 @@ There is a need for a high-performance immersive XR framework purpose-built for 
 
 ---
 
-## 💡 Proposed Solution
+## Proposed Solution
 
 PORE-XR is designed as an interactive XR visualization platform that enables:
 
@@ -72,7 +74,7 @@ The platform targets research, education, and industrial materials characterizat
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - Real-time volumetric rendering of XCT datasets
 - Segmentation visualization for pores, cracks, and regions of interest
@@ -85,7 +87,7 @@ The platform targets research, education, and industrial materials characterizat
 
 ---
 
-## 🧠 System Architecture
+## System Architecture
 
 > _[Architecture Diagram Placeholder]_
 
@@ -107,7 +109,7 @@ The platform targets research, education, and industrial materials characterizat
 
 ---
 
-## 🔄 Data Pipeline
+## Data Pipeline
 
 > _[Data Pipeline Diagram Placeholder]_
 
@@ -122,7 +124,7 @@ Typical workflow:
 
 ---
 
-## 🎮 Interaction & Analysis Tools
+## Interaction & Analysis Tools
 
 - Hand tracking and VR controller navigation
 - Volume slicing and scaling
@@ -130,18 +132,12 @@ Typical workflow:
 - 3D annotation tools
 - Measurement utilities
 
----
-
-## ⚡ Performance Strategy
-
-- GPU-accelerated volume rendering
-- On-demand streaming of volumetric subsets
-- Progressive refinement rendering
-- Adaptive sampling for large datasets
+> **Performance Strategy**
+> _[Placeholder]_
 
 ---
 
-## 🥽 Deployment Targets
+## Deployment Targets
 
 - **VR Mode**  
   Full immersion for research exploration and teaching modules
@@ -156,7 +152,7 @@ Typical workflow:
 
 ---
 
-## 🚀 Extensions / Future Work
+## Extensions / Future Work
 
 - Temporal XCT visualization for crack growth studies
 - AI-based defect classification pipelines
@@ -166,15 +162,7 @@ Typical workflow:
 
 ---
 
-## 🎥 Demo
-
-> _[Demo Video Placeholder]_
-
-> _[Screenshots / GIF Placeholder]_
-
----
-
-## 🛠 Getting Started
+## Getting Started
 
 > _[Setup Instructions Placeholder]_
 
@@ -185,7 +173,7 @@ Typical workflow:
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 ```
 pore-xr/
 ├── README.md
@@ -198,7 +186,7 @@ pore-xr/
 
 ---
 
-## 🗺 Roadmap
+## Roadmap
 
 - Initial prototype visualization
 - Multimodal alignment validation
@@ -209,18 +197,18 @@ pore-xr/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 > _[Contribution Guidelines Placeholder]_
 
 ---
 
-## 📜 License
+## License
 
 > _[License Placeholder]_
 
 ---
 
-## 📬 Contact
+## Contact
 
 > _[Team / Lab / Institution Placeholder]_
