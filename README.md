@@ -90,7 +90,7 @@ The platform targets research, education, and industrial materials characterizat
 
 ## System Architecture
 
-> _[Architecture Diagram Placeholder]_
+![System Architecture](docs/system_architecture.png)
 
 ### Data Ingestion & Pre-Processing
 
@@ -122,7 +122,7 @@ The platform targets research, education, and industrial materials characterizat
 
 ## Data Pipeline
 
-> _[Data Pipeline Diagram Placeholder]_
+![Data Pipeline](docs/data_pipeline.png)
 
 Typical end-to-end workflow:
 
