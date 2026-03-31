@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9c8d6ab32a1e91706955ff48f88a552d
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/DataFiles/PARCHG.0019_0020.0311-license.txt
+  uploadId: 658829

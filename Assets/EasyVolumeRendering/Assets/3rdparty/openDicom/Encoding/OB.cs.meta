@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6c61ca97a52c7c04d93c550797b4feab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/3rdparty/openDicom/Encoding/OB.cs
+  uploadId: 658829

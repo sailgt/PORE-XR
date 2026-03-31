@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a36887d62850e16489d1fd487dd7d6f1
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/3rdparty/openDicom/LGPL
+  uploadId: 658829

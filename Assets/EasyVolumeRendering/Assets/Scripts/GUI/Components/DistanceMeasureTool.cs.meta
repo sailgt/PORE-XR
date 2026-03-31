@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 8f3855a873454cd885c1682f14df8bab
+timeCreated: 1671217478
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Scripts/GUI/Components/DistanceMeasureTool.cs
+  uploadId: 658829

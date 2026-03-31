@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b28469b0d80b1a93eab0c08122545a03
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/DataFiles/VisMale-license.txt
+  uploadId: 658829

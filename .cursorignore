@@ -1,0 +1,28 @@
+# Unity generated folders
+Library/
+Temp/
+Logs/
+Obj/
+Build/
+Builds/
+UserSettings/
+MemoryCaptures/
+Recordings/
+
+# IDE / OS noise
+.vs/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Optional large binary assets you may not want AI to read
+*.psd
+*.tif
+*.tiff
+*.exr
+*.mp4
+*.mov
+*.wav
+*.fbx
+*.blend

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9fb811467373bd544bc8263137c243d0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/3rdparty/openDicom/Registry/Uid.cs
+  uploadId: 658829

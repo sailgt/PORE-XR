@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c065f1884402af707a0e8d778d50d29e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Scripts/VolumeObject/CrossSectionManager.cs
+  uploadId: 658829

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0bf17422967acdc98b7c9bdf99712383
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Shaders/Include/TricubicSampling.cginc
+  uploadId: 658829

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9e33c546d74b469448387eb023d1df76
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Resources/SlicingPlane.prefab
+  uploadId: 658829

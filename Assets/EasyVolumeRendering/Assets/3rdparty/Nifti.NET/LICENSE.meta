@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 79558059f111dd6a8a602a6d660c1e71
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/3rdparty/Nifti.NET/LICENSE
+  uploadId: 658829

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 49eccd9c87b5fde45810b63c2f167df3
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/DONOTREMOVE-PathSearchFile.txt
+  uploadId: 658829

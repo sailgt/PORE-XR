@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d3a3d1be37fcc3c4893fa3b9bb747e51
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Scripts/Importing/ImageFileImporter/Interface/IImageFileImporter.cs
+  uploadId: 658829

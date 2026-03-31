@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 90e61867e921489469b4826c129bde04
+ComputeShaderImporter:
+  externalObjects: {}
+  currentAPIMask: 4
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Resources/ComputeHistogram.compute
+  uploadId: 658829

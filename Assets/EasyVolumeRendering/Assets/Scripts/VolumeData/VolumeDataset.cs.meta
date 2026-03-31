@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6c292ee2920c4d64989a78d4ed9abb7e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Scripts/VolumeData/VolumeDataset.cs
+  uploadId: 658829

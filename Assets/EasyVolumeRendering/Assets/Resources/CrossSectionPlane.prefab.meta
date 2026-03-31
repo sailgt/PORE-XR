@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 671499143f6b4e24ab0822e1462a78aa
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Resources/CrossSectionPlane.prefab
+  uploadId: 658829

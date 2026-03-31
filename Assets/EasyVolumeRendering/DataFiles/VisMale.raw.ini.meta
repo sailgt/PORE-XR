@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b4c8f5a010478a462ba2cab11aa6c98c
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/DataFiles/VisMale.raw.ini
+  uploadId: 658829

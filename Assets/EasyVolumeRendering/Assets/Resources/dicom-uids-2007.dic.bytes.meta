@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 53bd64257ce5dc444ba9bc04d58de1e7
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Resources/dicom-uids-2007.dic.bytes
+  uploadId: 658829

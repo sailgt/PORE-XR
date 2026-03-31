@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 952eca46d42a45a0974a9a9515bd2c1c
+timeCreated: 1710481509
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Scripts/Lighting/ShadowVolumeManager.cs
+  uploadId: 658829

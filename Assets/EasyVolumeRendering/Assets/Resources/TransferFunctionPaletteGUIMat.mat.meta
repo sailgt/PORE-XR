@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ff490732e49820c42b1fb485f6a0717c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Resources/TransferFunctionPaletteGUIMat.mat
+  uploadId: 658829

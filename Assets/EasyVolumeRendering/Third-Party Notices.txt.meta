@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d57791acdb363f41b92bbfa8788e21a2
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Third-Party Notices.txt
+  uploadId: 658829

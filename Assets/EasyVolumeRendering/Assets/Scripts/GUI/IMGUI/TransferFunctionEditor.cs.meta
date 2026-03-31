@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9686cd473128d99a0aa69fa100f03e80
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Scripts/GUI/IMGUI/TransferFunctionEditor.cs
+  uploadId: 658829

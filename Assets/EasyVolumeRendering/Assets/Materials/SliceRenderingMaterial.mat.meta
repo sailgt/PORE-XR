@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 445fc0932bb5aab4b94f7548208708e1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Materials/SliceRenderingMaterial.mat
+  uploadId: 658829

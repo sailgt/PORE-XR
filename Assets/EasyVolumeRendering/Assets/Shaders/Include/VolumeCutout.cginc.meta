@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0b5329224693c0b5ab3b9b86bafef90c
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Shaders/Include/VolumeCutout.cginc
+  uploadId: 658829

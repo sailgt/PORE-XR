@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f9df7f8cb5dda3a48a945ab37d6b0d83
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 192890
+  packageName: Easy Volume Renderer
+  packageVersion: 1.7
+  assetPath: Assets/EasyVolumeRendering/Assets/Shaders/DirectVolumeRenderingShader.shader
+  uploadId: 658829
