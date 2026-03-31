@@ -268,8 +268,8 @@ This project is developed for research purposes at Georgia Institute of Technolo
 
 SAIL (https://sail.coe.gatech.edu/) at Georgia Institute of Technology
 
-- Mohsen Moghaddam
-- Pantea Habibi
-- Dylan Alter
+- Mohsen Moghaddam — [mohsen.moghaddam@gatech.edu](mailto:mohsen.moghaddam@gatech.edu)
+- Pantea Habibi — [phabibi6@gatech.edu](mailto:phabibi6@gatech.edu)
+- Dylan Alter — [alterdylan@gmail.com](mailto:alterdylan@gmail.com)
 
-For questions about the project, datasets, or collaboration, please reach out to the team.
+For questions about the project, datasets, or collaboration, please reach out to the team via email.
