@@ -39,17 +39,30 @@
 
 ## Key Features
 
-- Real-time volumetric rendering of XCT datasets
-- Segmentation visualization for pores, cracks, and regions of interest
-- Dual-volume loading: intensity volume + label-map overlay (automatically parented in-scene)
-- Interactive cutout tools (sphere and box) and cross-section slicing planes
-- Basic measurement information overlays for cutout volumes (dimensions displayed at each cutout)
-- Coordinate readout and tagging ability in volume-local space
-- Toggleable visualization layers (intensity visibility, label-map color)
-- Runtime quality control via sampling-rate multiplier slider
-- In-app file browser for selecting and loading NRRD dataset files at runtime
-- AR passthrough dimming slider
-- Cross-platform deployment (VR / AR / Desktop)
+### Visualization
+- Real-time volumetric rendering of XCT datasets  
+- Support for segmentation overlays (pores, cracks, and regions of interest)  
+- Dual-volume rendering with automatic alignment (intensity + label-map)  
+- Multiple rendering modes and adjustable transfer functions  
+
+### Interaction & Exploration
+- Intuitive XR-based manipulation (grab, rotate, scale)  
+- Interactive cutout tools (sphere and box) for localized inspection  
+- Cross-section and slicing planes for internal exploration  
+- Multi-scale navigation of volumetric data  
+
+### Analysis & Annotation
+- Real-time measurement overlays for cutout geometries  
+- Coordinate readout in volume-local space  
+- Persistent annotation and tagging capabilities  
+
+### Data & Performance
+- Runtime dataset loading via in-app file browser (NRRD support)  
+- Adjustable sampling rate for performance–quality trade-offs  
+
+### Platform Support
+- Cross-platform deployment: VR, AR, and desktop  
+- AR passthrough visualization with adjustable dimming  
 
 ---
 
@@ -72,31 +85,32 @@ PORE-XR supports multiple deployment modes to accommodate a range of research, e
 
 ![System Architecture](docs/system_architecture.png)
 
-### Data Ingestion & Pre-Processing
+The PORE-XR system is composed of two primary stages: offline data preparation and real-time XR-based visualization and interaction.
 
-**Off-line preparation (before the app):**
-- Acquire raw XCT scan data from an X-ray CT scanner
-- Open the raw data in a tool such as **3D Slicer** (or similar medical/scientific imaging software) to inspect, segment, and prepare volumes
-- Segment defects (pores, cracks, regions of interest) to produce a label-map volume
-- Downsample or crop as needed to manage file size and memory requirements
-- Export the intensity volume and the label-map volume as separate NRRD files
-- Place the exported files on an accessible storage location.
+### Data Preparation & Ingestion
 
-**In-app loading (at runtime):**
-- In-app file browser (SimpleFileBrowser) for runtime dataset selection
-- NRRD-format loading pipeline powered by the **Unity Volume Rendering** plugin with **SimpleITK** native bindings
-- User selects intensity file first, then label-map; both are loaded asynchronously with a progress indicator on the main menu
-- Label-map volume is automatically parented under the intensity volume with zeroed local transform
-- Label-map transfer-function color is configurable in the Inspector (default red)
+**Offline Processing**
+- Acquire raw XCT scan data from an X-ray CT scanner  
+- Process and inspect volumes using tools such as **3D Slicer** (or similar scientific imaging software)  
+- Segment defects (e.g., pores, cracks, regions of interest) to generate a label-map volume  
+- Downsample or crop datasets to optimize memory usage and performance  
+- Export intensity and label-map volumes as separate NRRD files  
 
-### Visualization & Rendering
+**Runtime Loading**
+- Select datasets via an in-app file browser  
+- Load NRRD volumes using the **Unity Volume Rendering** framework with **SimpleITK** bindings  
+- Asynchronously load intensity and label-map volumes with progress feedback  
+- Automatically align and parent label-map volumes to the corresponding intensity volume  
+- Configure label-map visualization (e.g., transfer function color) at runtime or via Inspector  
 
-- Unity-based rendering framework using **Unity Volume Rendering** shaders (DVR / MIP / surface modes)
-- Real-time volume rendering with XR Interaction Toolkit manipulation
-- Cutout sphere, cutout box, cross-section plane, and slicing plane tools from the plugin, extended with XR grab interactivity
-- World-space hand/wrist menu UI for volume management (create/delete cutouts and planes, toggle visibility, delete volume)
-- Main menu with dataset quality slider and file loading controls
-- Volume bounds wireframe visualization for spatial readability
+### Visualization & Interaction
+
+- GPU-based volume rendering using Unity Volume Rendering (DVR, MIP, and surface modes)  
+- Real-time interaction enabled by the XR Interaction Toolkit  
+- Interactive analysis tools, including cutout primitives and cross-section planes  
+- World-space UI (wrist-mounted and main menu) for dataset and tool management  
+- Adjustable rendering quality via sampling-rate controls  
+- Volume bounds visualization for improved spatial context  
 
 ---
 
@@ -104,23 +118,23 @@ PORE-XR supports multiple deployment modes to accommodate a range of research, e
 
 ![Data Pipeline](docs/data_pipeline.png)
 
-The following workflow outlines the end-to-end process from data acquisition to immersive exploration:
+The data pipeline defines the end-to-end workflow from XCT acquisition to immersive analysis in XR:
 
 1. **Data Acquisition**  
    Capture volumetric data using an X-ray CT scanner.
 
-2. **Reconstruction & Conversion**  
-   Reconstruct raw scan data and convert it to a standardized volumetric format (e.g., NRRD).
+2. **Reconstruction & Formatting**  
+   Reconstruct raw scan data and convert it into a standardized volumetric format (e.g., NRRD).
 
-3. **Segmentation & Export**  
-   Process the dataset in tools such as 3D Slicer to segment defects or regions of interest. Export both the intensity volume and corresponding label-map as separate NRRD files, applying downsampling if needed.
+3. **Segmentation & Preparation**  
+   Use tools such as **3D Slicer** to segment defects or regions of interest. Prepare datasets by downsampling or cropping as needed, and export both intensity and label-map volumes.
 
 4. **Dataset Loading**  
-   Launch the application and use the in-app file browser to load the intensity volume followed by the label-map.
+   Import volumes into the application via the in-app file browser, loading the intensity volume followed by the corresponding label-map.
 
 5. **Immersive Exploration & Analysis**  
-   Interact with the dataset in XR: manipulate volumes, generate cutouts and cross-sections, adjust rendering quality, inspect coordinates, and place annotations.
-
+   Explore and analyze the dataset in XR through direct manipulation, cross-sectional inspection, measurement, and annotation tools.
+   
 ---
 
 ## Interaction & Analysis
@@ -224,7 +238,7 @@ Please ensure contributions are well-documented and aligned with the project’s
 
 This project is developed for research purposes at the Georgia Institute of Technology. A formal license has not yet been established. Until then, all rights are reserved.  
 
-> Please contact the project team prior to any redistribution, modification, or use in external or commercial projects.
+> Please contact the project team prior to any redistribution, modification, or use in commercial projects.
 
 ---
 
