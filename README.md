@@ -205,7 +205,7 @@ Typical end-to-end workflow:
 2. Open the project in Unity and let packages resolve (XR Interaction Toolkit, OpenXR, Meta XR, Input System, UniTask).
 3. Retrieve large external files from Dropbox and place them in the expected project locations:
    - **Project dependencies and binaries** (includes `SimpleITKCSharpNative.dll` → place at `Assets/EasyVolumeRendering/Assets/3rdparty/SimpleITK/`):  
-     [Dropbox — Dependencies](https://www.dropbox.com/scl/fo/u4aycyqvr3cx2dxkw60n8/ACUQcG6XFpT5_EOEFa9_q3Y?rlkey=c1an73ytiikvddfs768be5b5d&st=dtj2lwfi&dl=0)
+     [Dropbox — Dependencies](https://www.dropbox.com/scl/fo/pzecwwg8hzxrfcv9zb0ms/ACQ3zdY-qxeGJpXbCiwv6Mk?rlkey=62agqxpy9n17z85w0qvr76z3v&st=bl8fwx0d&dl=0)
    - **Sample XCT data files** (`.nrrd` / `.uint16`):  
      [Dropbox — Data](https://www.dropbox.com/scl/fo/53olchkhmcl4tal47ow37/ADRFgJBi4xRgooVi3kt94rM?rlkey=n4gdgyc7ppbtycc2i8fwnyifo&st=m0iuiv9h&dl=0)
 4. Place required binaries/data at expected project/runtime locations.
