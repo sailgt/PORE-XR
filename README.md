@@ -1,6 +1,6 @@
 # PORE-XR
 
-**P**orous **O**bjects **R**esearch & **E**xploration in **XR** (PORE-XR) is an immersive Extended Reality (XR) visualization platform for exploring large-scale X-ray Computed Tomography (XCT) datasets and correlated metallography data in materials science. The platform enables researchers, students, and industry practitioners to intuitively explore internal material structures, analyze defects such as porosity and cracks, and perform spatially correlated multimodal analysis in VR, AR, and desktop environments.
+**P**orous **O**bjects **R**esearch & **E**xploration in **XR** (PORE-XR) is an immersive Extended Reality (XR) visualization platform for exploring large-scale X-ray Computed Tomography (XCT) datasets in materials science. The platform enables researchers, students, and industry practitioners to intuitively explore internal material structures, analyze defects such as porosity and cracks, and perform spatially correlated analysis in VR environments.
 
 > _[Demo Video Placeholder]_
 
@@ -30,9 +30,11 @@
 
 ## Overview
 
-X-ray Computed Tomography (XCT) provides non-destructive insight into the internal structure of materials across multiple length scales. However, conventional visualization workflows limit intuitive spatial understanding and multimodal correlation with complementary imaging techniques such as metallography.
+X-ray Computed Tomography (XCT) provides non-destructive insight into the internal structure of materials across multiple length scales. However, conventional visualization workflows limit intuitive spatial understanding.
 
-**PORE-XR** transforms volumetric datasets into immersive, navigable environments that enable researchers to explore microstructural features, perform measurements in 3D space, and analyze defect evolution interactively.
+**PORE-XR** transforms volumetric datasets into immersive, navigable environments that enable researchers to explore microstructural features and perform measurements in 3D space.
+
+The project is built in **Unity** and uses the [**Unity Volume Rendering**](https://github.com/mlavik1/UnityVolumeRendering) (also known as **EasyVolumeRendering**) open-source plugin as its core volume rendering backend, extended with custom scripts for XR interaction, UI, measurement overlays, and annotation tools. XR interaction is provided by the **XR Interaction Toolkit** with **OpenXR** support via PC Link.
 
 ---
 
@@ -42,8 +44,6 @@ Current XCT data exploration workflows are typically limited to:
 
 - 2D cross-sectional analysis
 - Static 3D renderings on conventional displays
-- Limited integration with metallography datasets
-- Performance bottlenecks with large volumetric data (2–25 GB)
 
 These constraints hinder:
 
@@ -56,7 +56,6 @@ There is a need for a high-performance immersive XR framework purpose-built for 
 
 - Large-scale volumetric rendering
 - Real-time interaction
-- Precise multimodal alignment
 - Cross-platform accessibility
 
 ---
@@ -66,9 +65,8 @@ There is a need for a high-performance immersive XR framework purpose-built for 
 PORE-XR is designed as an interactive XR visualization platform that enables:
 
 - Exploration of XCT volumes in immersive environments
-- Spatial correlation with metallography datasets
-- Real-time feature interaction
-- Multi-scale navigation and analysis
+- Real-time interaction
+- Multi-scale navigation and exploration for basic analysis
 
 The platform targets research, education, and industrial materials characterization workflows.
 
@@ -78,11 +76,14 @@ The platform targets research, education, and industrial materials characterizat
 
 - Real-time volumetric rendering of XCT datasets
 - Segmentation visualization for pores, cracks, and regions of interest
-- Multimodal metallography overlay alignment
-- Measurement tools for distances, diameters, and volumes
-- Toggleable visualization layers
-- Adaptive resolution rendering and data streaming
-- Support for datasets up to ~25 GB
+- Dual-volume loading: intensity volume + label-map overlay (automatically parented in-scene)
+- Interactive cutout tools (sphere and box) and cross-section slicing planes
+- Basic measurement information overlays for cutout volumes (dimensions displayed at each cutout)
+- Coordinate readout and tagging ability in volume-local space
+- Toggleable visualization layers (intensity visibility, label-map color)
+- Runtime quality control via sampling-rate multiplier slider
+- In-app file browser for selecting and loading NRRD dataset files at runtime
+- AR passthrough dimming slider
 - Cross-platform deployment (VR / AR / Desktop)
 
 ---
@@ -93,19 +94,29 @@ The platform targets research, education, and industrial materials characterizat
 
 ### Data Ingestion & Pre-Processing
 
-- Conversion of proprietary scan data to open formats (e.g., DICOM)
-- Automatic parsing of voxel size and acquisition metadata
-- Segmentation pipelines for feature extraction
-- Downsampling workflows for interactive previews
-- Dynamic loading of high-resolution sub-volumes
+**Off-line preparation (before the app):**
+- Acquire raw XCT scan data from an X-ray CT scanner
+- Open the raw data in a tool such as **3D Slicer** (or similar medical/scientific imaging software) to inspect, segment, and prepare volumes
+- Segment defects (pores, cracks, regions of interest) to produce a label-map volume
+- Downsample or crop as needed to manage file size and memory requirements
+- Export the intensity volume and the label-map volume as separate NRRD files
+- Place the exported files on an accessible storage location.
 
-### Visualization Core
+**In-app loading (at runtime):**
+- In-app file browser (SimpleFileBrowser) for runtime dataset selection
+- NRRD-format loading pipeline powered by the **Unity Volume Rendering** plugin with **SimpleITK** native bindings
+- User selects intensity file first, then label-map; both are loaded asynchronously with a progress indicator on the main menu
+- Label-map volume is automatically parented under the intensity volume with zeroed local transform
+- Label-map transfer-function color is configurable in the Inspector (default red)
 
-- Unity-based rendering framework
-- Real-time voxel rendering
-- Adaptive meshing strategies
-- Spatially aligned metallography texture mapping
-- Integration of porosity geometry metrics
+### Visualization & Rendering
+
+- Unity-based rendering framework using **Unity Volume Rendering** shaders (DVR / MIP / surface modes)
+- Real-time volume rendering with XR Interaction Toolkit manipulation
+- Cutout sphere, cutout box, cross-section plane, and slicing plane tools from the plugin, extended with XR grab interactivity
+- World-space hand/wrist menu UI for volume management (create/delete cutouts and planes, toggle visibility, delete volume)
+- Main menu with dataset quality slider and file loading controls
+- Volume bounds wireframe visualization for spatial readability
 
 ---
 
@@ -113,42 +124,60 @@ The platform targets research, education, and industrial materials characterizat
 
 > _[Data Pipeline Diagram Placeholder]_
 
-Typical workflow:
+Typical end-to-end workflow:
 
-1. XCT data acquisition
-2. Conversion to open volumetric formats
-3. Segmentation of defects / regions
-4. Downsampling and data preparation
-5. Import into PORE-XR visualization engine
-6. Immersive exploration and interaction
+1. **XCT data acquisition** — scan the physical sample with an X-ray CT scanner
+2. **Reconstruction & conversion** — reconstruct the scan and convert to an open volumetric format (e.g. NRRD)
+3. **Segmentation & export** — open in 3D Slicer (or similar tool), segment defects / regions of interest into a label-map, downsample if needed, and export intensity + label-map as separate NRRD files
+4. **Launch app & load** — open the VR application, use the in-app file browser to select the intensity file first, then the label-map
+5. **Immersive exploration** — interact in VR: grab/rotate/scale volumes, create cutout spheres/boxes and cross-section planes, adjust quality, read coordinates, and place annotation tags
 
 ---
 
 ## Interaction & Analysis Tools
 
-- Hand tracking and VR controller navigation
-- Volume slicing and scaling
-- Layer toggling (raw XCT / segmentation / metallography / derived fields)
-- 3D annotation tools
-- Measurement utilities
+### Volume Manipulation (XR Interaction Toolkit)
+- **Grab and move**: grip (side squeeze) on the right or left controller to grab and reposition the volume
+- **Two-handed scale**: grab with both controllers simultaneously to scale the volume up or down
+- **Y-axis locked rotation**: volume rotation is constrained so the object stays upright (local up = world up) via a custom `XCTGeneralGrabTransformer`
+- **Snap turn and strafe**: standard locomotion; teleportation is disabled
+- **Multi-volume targeting**: grabbing a volume automatically re-targets the wrist management menu to that volume
 
-> **Performance Strategy**
-> _[Placeholder]_
+### Cutout and Cross-Section Tools (via wrist menu buttons)
+- **Create cutout sphere**: spawns an interactive sphere cutout at the volume position; grabbable and scalable
+- **Create cutout box**: spawns an interactive box cutout at the volume position; grabbable and scalable
+- **Create cross-section plane**: spawns a slicing plane; grabbable and repositionable
+- **Delete all cutout volumes / Delete all cross-sections**: bulk removal buttons on the wrist menu
+- **Delete volume**: removes the currently targeted volume entirely
+
+### Measurement Overlay (`CutoutMeasurementOverlay`)
+- Automatically displays dimension labels on every active cutout sphere (diameter) and cutout box (side length if uniform, or W x H x D if not)
+- Labels are billboarded toward the camera and update in real time as cutouts are moved/scaled
+
+### Coordinate Visualization & Annotation (`CoordinateViz`)
+- **Hold A** (right hand) or **X** (left hand): shows the controller's position as volume-local coordinates (poke-point style) in a billboarded text label
+- **Press B** (right hand) or **Y** (left hand): places a persistent small sphere annotation at the current controller position, parented to the volume so it stays fixed in volume space when the volume is moved or scaled
+- Targets the closest interactive volume automatically when multiple volumes are in the scene
+
+### UI Controls
+- **Main menu**: load dataset button with progress indicator, data quality slider (sampling-rate multiplier 0.2–1.0), AR passthrough dimming slider
+- **Volume management wrist menu**: dataset name display, intensity visibility toggle, cutout/plane creation and deletion buttons
+
+> **Performance Note**  
+> Loading large dual-volume datasets can require substantial RAM. For smooth demos, prefer machines with ample memory (32 GB+).
 
 ---
 
 ## Deployment Targets
 
 - **VR Mode**  
-  Full immersion for research exploration and teaching modules
+  Full immersion for research exploration and teaching modules. Primary deployment: Meta Quest via PC Link.
 
 - **AR Mode**  
-  Overlay volumetric data onto physical samples or laboratory environments
+  Overlay volumetric data onto physical samples or laboratory environments via passthrough. Passthrough dimming is adjustable.
 
 - **Desktop Mode**  
-  Non-immersive interaction for analysis and preprocessing
-
-> _[Platform Support Table Placeholder]_
+  Non-immersive interaction for analysis and preprocessing.
 
 ---
 
@@ -164,24 +193,46 @@ Typical workflow:
 
 ## Getting Started
 
-> _[Setup Instructions Placeholder]_
+### Prerequisites
 
-- Hardware requirements
-- Unity version
-- XR SDK dependencies
-- Dataset import steps
+- Unity (version matching the `Packages/manifest.json` in this repository)
+- Meta Quest headset + Quest Link (for VR testing)
+- PC with 32 GB+ RAM recommended for large datasets
+
+### Setup
+
+1. Clone or download this repository.
+2. Open the project in Unity and let packages resolve (XR Interaction Toolkit, OpenXR, Meta XR, Input System, UniTask).
+3. Retrieve large external files from Dropbox and place them in the expected project locations:
+   - **Project dependencies and binaries** (includes `SimpleITKCSharpNative.dll` → place at `Assets/EasyVolumeRendering/Assets/3rdparty/SimpleITK/`):  
+     [Dropbox — Dependencies](https://www.dropbox.com/scl/fo/u4aycyqvr3cx2dxkw60n8/ACUQcG6XFpT5_EOEFa9_q3Y?rlkey=c1an73ytiikvddfs768be5b5d&st=dtj2lwfi&dl=0)
+   - **Sample XCT data files** (`.nrrd` / `.uint16`):  
+     [Dropbox — Data](https://www.dropbox.com/scl/fo/53olchkhmcl4tal47ow37/ADRFgJBi4xRgooVi3kt94rM?rlkey=n4gdgyc7ppbtycc2i8fwnyifo&st=m0iuiv9h&dl=0)
+4. Place required binaries/data at expected project/runtime locations.
+5. Connect Quest headset via Link, enter Play mode, and use the in-app file browser to select and load datasets (intensity and 
+label-map files)
+
+### In-Headset Controls Summary
+
+| Action | Controller Input |
+|---|---|
+| Grab / move volume or cutout | Grip (side squeeze) |
+| Two-handed scale | Grip with both hands simultaneously |
+| Show live coordinates | Hold A (right) or X (left) |
+| Place annotation sphere | Press B (right) or Y (left) |
 
 ---
 
 ## Repository Structure
 ```
-pore-xr/
-├── README.md
-├── src/
-├── assets/
-├── datasets/
-├── experiments/
-└── docs/ (future expansion)
+PORE-XR/
+├── Assets/
+│   ├── Scripts/
+│   ├── Prefabs/
+│   └── ... (Unity assets, scenes, samples)
+├── Packages/
+├── ProjectSettings/
+└── README.md
 ```
 
 ---
@@ -199,16 +250,26 @@ pore-xr/
 
 ## Contributing
 
-> _[Contribution Guidelines Placeholder]_
+1. Fork the repository and create a feature branch.
+2. Follow the existing code style and project structure.
+3. Test changes in VR (Meta Quest via PC Link) before submitting.
+4. Do **not** commit large binary files (datasets, native DLLs) — add them to `.gitignore` and distribute via the shared folder.
+5. Open a pull request with a clear description of what changed and why.
 
 ---
 
 ## License
 
-> _[License Placeholder]_
+This project is developed for research purposes at Georgia Institute of Technology. License terms are to be determined. Please contact the team before redistributing or using in external projects.
 
 ---
 
 ## Contact
 
-> _[Team / Lab / Institution Placeholder]_
+SAIL (https://sail.coe.gatech.edu/) at Georgia Institute of Technology
+
+- Mohsen Moghaddam
+- Pantea Habibi
+- Dylan Alter
+
+For questions about the project, datasets, or collaboration, please reach out to the team.
