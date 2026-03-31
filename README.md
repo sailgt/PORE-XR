@@ -83,7 +83,7 @@ PORE-XR supports multiple deployment modes to accommodate a range of research, e
 
 ## System Architecture
 
-![System Architecture](docs/system_architecture.png)
+![System Architecture](docs/PORE-XR_Architecture.png)
 
 The PORE-XR system is composed of two primary stages: offline data preparation and real-time XR-based visualization and interaction.
 
