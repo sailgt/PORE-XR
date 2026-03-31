@@ -11,17 +11,13 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- [Problem Statement](#problem-statement)
-- [Proposed Solution](#proposed-solution)
 - [Key Features](#key-features)
+- [Deployment Targets](#deployment-targets)
 - [System Architecture](#system-architecture)
 - [Data Pipeline](#data-pipeline)
-- [Interaction and Analysis Tools](#interaction-and-analysis-tools)
-- [Deployment Targets](#deployment-targets)
-- [Extensions / Future Work](#extensions--future-work)
+- [Interaction & Analysis](#interaction--analysis)
+- [Future Work](#future-work)
 - [Getting Started](#getting-started)
-- [Repository Structure](#repository-structure)
-- [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -30,45 +26,14 @@
 
 ## Overview
 
-X-ray Computed Tomography (XCT) provides non-destructive insight into the internal structure of materials across multiple length scales. However, conventional visualization workflows limit intuitive spatial understanding.
-
-**PORE-XR** transforms volumetric datasets into immersive, navigable environments that enable researchers to explore microstructural features and perform measurements in 3D space.
-
-The project is built in **Unity** and uses the [**Unity Volume Rendering**](https://github.com/mlavik1/UnityVolumeRendering) (also known as **EasyVolumeRendering**) open-source plugin as its core volume rendering backend, extended with custom scripts for XR interaction, UI, measurement overlays, and annotation tools. XR interaction is provided by the **XR Interaction Toolkit** with **OpenXR** support via PC Link.
-
----
-
-## Problem Statement
-
-Current XCT data exploration workflows are typically limited to:
-
-- 2D cross-sectional analysis
-- Static 3D renderings on conventional displays
-
-These constraints hinder:
+**X-ray Computed Tomography (XCT)** provides non-destructive insight into the internal structure of materials across multiple length scales. However, conventional visualization workflows limit intuitive spatial understanding due to their limitation to 2D cross-sectional analysis and Static 3D renderings on conventional displays. These constraints hinder:
 
 - Intuitive spatial interpretation of pores and cracks
 - Correlation of morphology with mechanical performance
 - Collaborative exploration and teaching
 - Interactive annotation and storytelling
 
-There is a need for a high-performance immersive XR framework purpose-built for materials science that supports:
-
-- Large-scale volumetric rendering
-- Real-time interaction
-- Cross-platform accessibility
-
----
-
-## Proposed Solution
-
-PORE-XR is designed as an interactive XR visualization platform that enables:
-
-- Exploration of XCT volumes in immersive environments
-- Real-time interaction
-- Multi-scale navigation and exploration for basic analysis
-
-The platform targets research, education, and industrial materials characterization workflows.
+**PORE-XR** transforms volumetric datasets into immersive, navigable environments, enabling researchers to explore XCT volumes and microstructural features, perform interactive 3D measurements, and conduct multi-scale analysis. The project is built in **Unity** and uses the [**Unity Volume Rendering**](https://github.com/mlavik1/UnityVolumeRendering) (also known as **EasyVolumeRendering**) open-source plugin as its core volume rendering backend, extended with custom scripts for XR interaction, UI, measurement overlays, and annotation tools. XR interaction is provided by the **XR Interaction Toolkit** with **OpenXR** support via PC Link. 
 
 ---
 
@@ -86,6 +51,21 @@ The platform targets research, education, and industrial materials characterizat
 - AR passthrough dimming slider
 - Cross-platform deployment (VR / AR / Desktop)
 
+---
+
+## Deployment Targets
+
+PORE-XR supports multiple deployment modes to accommodate a range of research, educational, and analysis workflows:
+
+- **VR Mode**  
+  Fully immersive environment for in-depth exploration, analysis, and teaching. Primary deployment targets Meta Quest devices via PC Link.
+
+- **AR Mode**  
+  Integrates volumetric data with real-world environments using passthrough, enabling contextual visualization alongside physical samples. Passthrough intensity can be adjusted for clarity.
+
+- **Desktop Mode**  
+  Non-immersive interface for data inspection, preprocessing, and general interaction without XR hardware.
+  
 ---
 
 ## System Architecture
@@ -124,17 +104,28 @@ The platform targets research, education, and industrial materials characterizat
 
 ![Data Pipeline](docs/data_pipeline.png)
 
-Typical end-to-end workflow:
+The following workflow outlines the end-to-end process from data acquisition to immersive exploration:
 
-1. **XCT data acquisition** — scan the physical sample with an X-ray CT scanner
-2. **Reconstruction & conversion** — reconstruct the scan and convert to an open volumetric format (e.g. NRRD)
-3. **Segmentation & export** — open in 3D Slicer (or similar tool), segment defects / regions of interest into a label-map, downsample if needed, and export intensity + label-map as separate NRRD files
-4. **Launch app & load** — open the VR application, use the in-app file browser to select the intensity file first, then the label-map
-5. **Immersive exploration** — interact in VR: grab/rotate/scale volumes, create cutout spheres/boxes and cross-section planes, adjust quality, read coordinates, and place annotation tags
+1. **Data Acquisition**  
+   Capture volumetric data using an X-ray CT scanner.
+
+2. **Reconstruction & Conversion**  
+   Reconstruct raw scan data and convert it to a standardized volumetric format (e.g., NRRD).
+
+3. **Segmentation & Export**  
+   Process the dataset in tools such as 3D Slicer to segment defects or regions of interest. Export both the intensity volume and corresponding label-map as separate NRRD files, applying downsampling if needed.
+
+4. **Dataset Loading**  
+   Launch the application and use the in-app file browser to load the intensity volume followed by the label-map.
+
+5. **Immersive Exploration & Analysis**  
+   Interact with the dataset in XR: manipulate volumes, generate cutouts and cross-sections, adjust rendering quality, inspect coordinates, and place annotations.
 
 ---
 
-## Interaction & Analysis Tools
+## Interaction & Analysis
+
+PORE-XR provides a set of intuitive XR interaction and analysis tools for exploring and interrogating volumetric datasets in real time.
 
 ### Volume Manipulation (XR Interaction Toolkit)
 - **Grab and move**: grip (side squeeze) on the right or left controller to grab and reposition the volume
@@ -168,26 +159,18 @@ Typical end-to-end workflow:
 
 ---
 
-## Deployment Targets
-
-- **VR Mode**  
-  Full immersion for research exploration and teaching modules. Primary deployment: Meta Quest via PC Link.
-
-- **AR Mode**  
-  Overlay volumetric data onto physical samples or laboratory environments via passthrough. Passthrough dimming is adjustable.
-
-- **Desktop Mode**  
-  Non-immersive interaction for analysis and preprocessing.
-
----
-
-## Extensions / Future Work
-
-- Temporal XCT visualization for crack growth studies
-- AI-based defect classification pipelines
-- Multi-user collaborative XR sessions
-- Export workflows for publication-ready annotated datasets
-- Digital twin integration
+## Future Work
+Planned extensions aim to expand PORE-XR’s analytical capabilities, scalability, and collaborative potential:
+- **Temporal XCT visualization**
+  Support for time-resolved datasets to analyze dynamic processes such as crack initiation and propagation
+- **AI-assisted defect analysis**
+  Integration of machine learning pipelines for automated detection, segmentation, and classification of defects
+- **Collaborative XR environments**
+  Multi-user sessions enabling shared exploration, annotation, and discussion in real time
+- **Advanced export workflows**
+  Tools for generating publication-ready visuals, annotated datasets, and analysis outputs
+- **Digital twin integration**
+  Coupling volumetric data with simulation and sensor data for comprehensive digital twin frameworks
 
 ---
 
@@ -223,53 +206,36 @@ label-map files)
 
 ---
 
-## Repository Structure
-```
-PORE-XR/
-├── Assets/
-│   ├── Scripts/
-│   ├── Prefabs/
-│   └── ... (Unity assets, scenes, samples)
-├── Packages/
-├── ProjectSettings/
-└── README.md
-```
-
----
-
-## Roadmap
-
-- Initial prototype visualization
-- Multimodal alignment validation
-- Performance optimization phase
-- User testing with materials researchers
-- AI integration module
-- Public research release
-
----
-
 ## Contributing
 
-1. Fork the repository and create a feature branch.
-2. Follow the existing code style and project structure.
-3. Test changes in VR (Meta Quest via PC Link) before submitting.
-4. Do **not** commit large binary files (datasets, native DLLs) — add them to `.gitignore` and distribute via the shared folder.
-5. Open a pull request with a clear description of what changed and why.
+We welcome contributions that improve functionality, performance, and usability. To contribute:
+
+1. Fork the repository and create a dedicated feature branch.  
+2. Adhere to the existing code style and project structure.  
+3. Test all changes thoroughly, including in VR (Meta Quest via PC Link) when applicable.  
+4. Avoid committing large binary files (e.g., datasets, native DLLs); instead, add them to `.gitignore` and distribute via approved external storage.  
+5. Submit a pull request with a clear description of the changes, rationale, and any relevant testing details.  
+
+Please ensure contributions are well-documented and aligned with the project’s research objectives.
 
 ---
 
 ## License
 
-This project is developed for research purposes at Georgia Institute of Technology. License terms are to be determined. Please contact the team before redistributing or using in external projects.
+This project is developed for research purposes at the Georgia Institute of Technology. A formal license has not yet been established. Until then, all rights are reserved.  
+
+> Please contact the project team prior to any redistribution, modification, or use in external or commercial projects.
 
 ---
 
 ## Contact
 
-SAIL (https://sail.coe.gatech.edu/) at Georgia Institute of Technology
+This project is developed by the [Symbiotic and Augmented Intelligence Laboratory (SAIL)](https://sail.coe.gatech.edu/) at the Georgia Institute of Technology.
 
-- Mohsen Moghaddam — [mohsen.moghaddam@gatech.edu](mailto:mohsen.moghaddam@gatech.edu)
-- Pantea Habibi — [phabibi6@gatech.edu](mailto:phabibi6@gatech.edu)
-- Dylan Alter — [alterdylan@gmail.com](mailto:alterdylan@gmail.com)
+For inquiries related to the project, datasets, or potential collaborations, please contact:
 
-For questions about the project, datasets, or collaboration, please reach out to the team via email.
+- **Mohsen Moghaddam** — [mohsen.moghaddam@gatech.edu](mailto:mohsen.moghaddam@gatech.edu)  
+- **Pantea Habibi** — [phabibi6@gatech.edu](mailto:phabibi6@gatech.edu)  
+- **Dylan Alter** — [alterdylan@gmail.com](mailto:alterdylan@gmail.com)  
+
+We welcome collaboration opportunities from academic, industry, and research partners.
