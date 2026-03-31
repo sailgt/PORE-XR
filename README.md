@@ -116,7 +116,7 @@ The PORE-XR system is composed of two primary stages: offline data preparation a
 
 ## Data Pipeline
 
-![Data Pipeline](docs/data_pipeline.png)
+![Data Pipeline](docs/PORE-XR Data Pipeline.png)
 
 The data pipeline defines the end-to-end workflow from XCT acquisition to immersive analysis in XR:
 
