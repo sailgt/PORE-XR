@@ -248,8 +248,8 @@ This project is developed by the [Symbiotic and Augmented Intelligence Laborator
 
 For inquiries related to the project, datasets, or potential collaborations, please contact:
 
-- **Mohsen Moghaddam** — [mohsen.moghaddam@gatech.edu](mailto:mohsen.moghaddam@gatech.edu)  
 - **Pantea Habibi** — [phabibi6@gatech.edu](mailto:phabibi6@gatech.edu)  
 - **Dylan Alter** — [alterdylan@gmail.com](mailto:alterdylan@gmail.com)  
+- **Mohsen Moghaddam** — [mohsen.moghaddam@gatech.edu](mailto:mohsen.moghaddam@gatech.edu)  
 
 We welcome collaboration opportunities from academic, industry, and research partners.
