@@ -169,7 +169,7 @@ PORE-XR provides a set of intuitive XR interaction and analysis tools for explor
 - **Volume management wrist menu**: dataset name display, intensity visibility toggle, cutout/plane creation and deletion buttons
 
 > **Performance Note**  
-> Loading large dual-volume datasets can require substantial RAM. For smooth demos, prefer machines with ample memory (32 GB+).
+> Loading large dual-volume datasets can require substantial RAM. For smooth demos, prefer machines with ample memory (32 GB+) and a VR capable GPU with ample video memory(12+).
 
 ---
 
@@ -185,7 +185,8 @@ Planned extensions aim to expand PORE-XR’s analytical capabilities, scalabilit
   Tools for generating publication-ready visuals, annotated datasets, and analysis outputs
 - **Digital twin integration**
   Coupling volumetric data with simulation and sensor data for comprehensive digital twin frameworks
-
+- **More Customizable Import Pipeline**
+  Ability to import multiple labelmap volumes and more manipulation controls for viewing volumes
 ---
 
 ## Getting Started
@@ -193,7 +194,7 @@ Planned extensions aim to expand PORE-XR’s analytical capabilities, scalabilit
 ### Prerequisites
 
 - Unity (version matching the `Packages/manifest.json` in this repository)
-- Meta Quest headset + Quest Link (for VR testing)
+- An OpenXR compatible headset (A Meta Quest headset + Quest Link is preferred, which was used during development)
 - PC with 32 GB+ RAM recommended for large datasets
 
 ### Setup
@@ -236,10 +237,8 @@ Please ensure contributions are well-documented and aligned with the project’s
 
 ## License
 
-This project is developed for research purposes at the Georgia Institute of Technology. A formal license has not yet been established. Until then, all rights are reserved.  
-
+This project is developed for research purposes at the Georgia Institute of Technology. A formal license has not yet been established. Until then, all rights are reserved.  EasyVolumeRendering is licensed under MIT license requirements.
 > Please contact the project team prior to any redistribution, modification, or use in commercial projects.
-
 ---
 
 ## Contact
@@ -249,7 +248,7 @@ This project is developed by the [Symbiotic and Augmented Intelligence Laborator
 For inquiries related to the project, datasets, or potential collaborations, please contact:
 
 - **Pantea Habibi** — [phabibi6@gatech.edu](mailto:phabibi6@gatech.edu)  
-- **Dylan Alter** — [alterdylan@gmail.com](mailto:alterdylan@gmail.com)  
+- **Dylan Alter** — [dylan@wolfstaginteractive.com](mailto:dylan@gwolfstaginteractive.com), Website: (https://www.wolfstaginteractive.com/)  
 - **Mohsen Moghaddam** — [mohsen.moghaddam@gatech.edu](mailto:mohsen.moghaddam@gatech.edu)  
 
 We welcome collaboration opportunities from academic, industry, and research partners.
