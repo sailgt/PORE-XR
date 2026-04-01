@@ -2,9 +2,9 @@
 
 **P**orous **O**bjects **R**esearch & **E**xploration in **XR** (PORE-XR) is an immersive Extended Reality (XR) visualization platform for exploring large-scale X-ray Computed Tomography (XCT) datasets in materials science. The platform enables researchers, students, and industry practitioners to intuitively explore internal material structures, analyze defects such as porosity and cracks, and perform spatially correlated analysis in VR environments.
 
-> _[Demo Video Placeholder]_
+## Demo Video
 
-> _[Screenshots / GIF Placeholder]_
+[![Watch the PORE-XR demo](https://img.youtube.com/vi/mItDBYmMZIU/hqdefault.jpg)](https://www.youtube.com/watch?v=mItDBYmMZIU)
 
 ---
 
