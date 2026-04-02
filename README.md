@@ -5,8 +5,10 @@
 ## Demo Video (Click to Watch Full Video)
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=mItDBYmMZIU" target="_blank" rel="noopener noreferrer">
-    <img src="./docs/PORE.gif" alt="Preview of demo video - click to watch full video on YouTube" style="width: 100%; max-width: 900px; height: auto; border-radius: 8px;" />
+  <a href="https://www.youtube.com/watch?v=mItDBYmMZIU">
+    <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/docs/PORE.gif"
+         alt="Preview of demo video - click to watch full video on YouTube"
+         width="900" />
   </a>
 </p>
 
