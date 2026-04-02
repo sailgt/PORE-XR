@@ -4,7 +4,11 @@
 
 ## Demo Video
 
-[![Watch the PORE-XR demo](https://img.youtube.com/vi/mItDBYmMZIU/hqdefault.jpg)](https://www.youtube.com/watch?v=mItDBYmMZIU)
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=mItDBYmMZIU">
+    <img src="./docs/PORE.gif" width="600" alt="Watch Demo on YouTube"/>
+  </a>
+</p>
 
 ---
 
