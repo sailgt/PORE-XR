@@ -4,7 +4,7 @@
 
 ## Demo Video ([Click to Watch Full Video on YouTube](https://youtu.be/mItDBYmMZIU?si=OEch0NoLl9g6Z_Gy))
 
-[![Preview of demo video](https://raw.githubusercontent.com/sailgt/PORE-XR/main/docs/PORE.gif)](https://www.youtube.com/watch?v=mItDBYmMZIU)
+[![Preview of demo video](https://raw.githubusercontent.com/sailgt/PORE-XR/main/docs/PORE-2.gif)](https://www.youtube.com/watch?v=mItDBYmMZIU)
 
 > This is a preview—click to watch the full video on [YouTube](https://youtu.be/mItDBYmMZIU?si=OEch0NoLl9g6Z_Gy)
 
