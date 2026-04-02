@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <em>👆 This is a preview — click to watch the full video on YouTube</em>
+  <em>This is a preview—click to watch the full video on [YouTube](https://www.youtube.com/watch?v=mItDBYmMZIU)</em>
 </p>
 
 ---
