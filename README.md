@@ -4,13 +4,7 @@
 
 ## Demo Video (Click to Watch Full Video)
 
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=mItDBYmMZIU">
-    <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/docs/PORE.gif"
-         alt="Preview of demo video - click to watch full video on YouTube"
-         width="900" />
-  </a>
-</p>
+[![Preview of demo video](https://raw.githubusercontent.com/sailgt/PORE-XR/main/docs/PORE.gif)](https://www.youtube.com/watch?v=mItDBYmMZIU)
 
 > This is a preview—click to watch the full video on YouTube
 
